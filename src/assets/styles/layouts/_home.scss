@@ -1,21 +1,84 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 30px;
+  padding: 10px;
   font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: $color-bg;
+  line-height: 25px;
 }
 
-.uoc-logo {
-  display: block;
+.titulo-principal {
+  text-align: center;
+  color: $color-titulo;
+  font-size: 2rem;
+}
+
+.titulo-seccion {
+  margin-top: 40px;
   margin-bottom: 20px;
-  max-width: 300px;
-  height: auto;
+  color: $color-seccion;
+  font-size: 1.5rem;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.periodo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: $color-periodo;
+}
+
+.fotografia {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 30px;
+    justify-items: start;
+    align-items: center;
+  }
+  
+  .fotografia {
+    grid-column: 1 / 1;
+  }
+	
+  .datos-personales {
+    grid-column: 2 / 2;
+  }
+  
+  .titulo-principal {
+    font-size: 2.5rem;
+  }
+  
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
